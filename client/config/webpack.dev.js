@@ -153,6 +153,12 @@ module.exports = function (options) {
       historyApiFallback: {
         index: '/index.html'
       },
+      proxy: {
+        "/api": {
+          target: "http://localhost:3001",
+          secure: false
+        }
+      },
       watchOptions: {
         aggregateTimeout: 300,
         poll: 1000
